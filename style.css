@@ -1,0 +1,355 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+
+#combinators{
+  color: black;
+  background-color: orangered;
+}
+
+#decendent-selector{
+  border: 3px solid black;
+}
+
+/* decendent selector */
+
+#decendent-selector p{
+  color: blue;
+}
+
+#decendent-selector ul li span{
+  color: lightpink;
+}
+
+
+/* direct child */
+
+ol li{
+  color: rgb(245, 223, 29);
+}
+
+ol > li {
+  color: skyblue;
+}
+
+ol > li span{
+  color: pink;
+}
+
+/* adjacent sibling */
+
+#decendent-selector + p{
+  color: cornflowerblue;
+}
+
+#para + li{
+  color: blueviolet;
+}
+
+#list + p{
+  color: slategray;
+}
+
+
+
+
+
+/* general sibling */
+
+#general-sibling ~ p{
+  color: blueviolet 
+}
+
+#general-sibling ~ li{
+  color: orange;
+}
+
+
+
+/* attribute selector */
+
+#attribute-selector{
+  color: black;
+  background-color: darkolivegreen;
+}
+
+#attribute-div{
+  border: 3px solid black;
+}
+
+li[type]{
+  color: blue;
+}
+
+li[type="circle"]{
+  color: rgb(185, 142, 226);
+}
+
+li[type^="sq"] {
+  color: limegreen;
+}
+
+img[src$=".jpg"] {
+  border: 3px solid black;
+  margin: 5px;
+}
+
+p[id|="para"]{
+  background-color: black;
+}
+
+a[title*="of"]{
+  color: darkgoldenrod;
+  display: block;
+}
+
+a[title~="black"]{
+  color: crimson;
+}
+
+
+
+/* pseudo class */
+
+#form{
+  border: 3px solid black;
+   
+  width: 300px;
+  padding: 20px 0px 5px 3px;
+}
+
+input:focus{
+  border: 2px solid rgb(247, 53, 53);
+  
+}
+
+input[type="checkbox"]:checked{
+  box-shadow: 0px 0px 0px 2px rgb(250, 53, 53);
+}
+
+input[type="radio"]:checked + label{
+  color: rgb(250, 53, 53);
+}
+
+input:disabled{
+  background-color: rgb(241, 168, 11);
+}
+
+input:enabled{
+  background-color: rgb(201, 243, 128);
+}
+
+input:required{
+  background-color: black;
+  color: silver;
+}
+
+input[type="number"]:in-range{
+  background: rgb(110, 110, 110);
+}
+
+input[type="number"]:out-of-range{
+  background: royalblue;
+}
+
+input:read-only{
+  background-color: blue;
+}
+
+input:read-write{
+  background-color: deepskyblue;
+}
+
+input:invalid{
+  background-color: red;
+}
+
+select option:default{
+  color: cornflowerblue;
+}
+
+
+#pseudo li:first-child{
+  color: orangered;
+}
+
+#pseudo li:last-child{
+  color: cornflowerblue;
+} 
+
+p:nth-child(2n+1){
+      color: chocolate;
+}
+
+p:nth-last-child(2n+1){
+  color: darkslategrey;
+}
+
+p:nth-of-type(2){
+  color: lawngreen;
+}
+
+p:nth-last-child(1){
+  color: aqua;
+}
+
+ul li:only-child{
+  color: rgb(240, 33, 240);
+}
+
+ul li:only-child{
+  color: indigo;
+}
+
+ol li:only-of-type{
+  color:rgb(245, 223, 29);
+  font-size: larger;
+}
+
+ol p:first-of-type{
+  background-color: orangered;
+}
+
+p:last-of-type{
+  background-color: black;
+}
+
+:empty{
+  border: 3px solid rgb(147, 238, 215);
+}
+
+div ul li:not(#li, .hey){
+  color: crimson;
+}
+
+#bar{
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+  height: 18px;
+  width: 380px;
+  background-color: rgb(223, 219, 219);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  animation: bar;
+  animation-duration: 2s;
+  animation-iteration-count: 5;
+  display: flex;
+}
+
+.small{
+  height: 18px;
+  width: 90px;
+  border: 0px;
+}
+
+
+  /* @keyframes bar{
+
+    0%{
+      background-color: aqua;
+    }
+    25%{
+      background-color: blueviolet;
+    }
+    50%{
+      background-color: chocolate;
+    }
+    75%{
+      background-color: chartreuse;
+    }
+    }
+     */
+
+#item-1{
+animation: item-1;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+
+#item-2{
+animation: item-2;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-delay: 2s;
+}
+
+#item-3{
+animation: item-3;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-delay: 4s;
+}
+
+#item-4{
+    animation: item-4;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 6s;
+}
+
+  @keyframes item-1{
+    from{
+      back-ground: white;
+    }
+
+    to{
+      background-color: black;
+    }
+  }
+
+  @keyframes item-2{
+    from{
+      back-ground: white;
+    }
+
+    to{
+      background-color: rgb(245, 232, 57);
+    }
+  }
+
+  @keyframes item-3{
+    from{
+      back-ground: white;
+    }
+
+    to{
+      background-color: rgb(47, 190, 247);
+    }
+  }
+
+  @keyframes item-4{
+    from{
+      back-ground: white;
+    }
+
+    to{
+      background-color: rgb(143, 231, 71);
+    }
+  } 
+
+  p:lang(en){
+    color: rgb(20, 220, 110);
+  }
+
+  p:lang(de){
+    color: blue;
+  }
+
+ a{
+    color: black;
+  }
+
+  p:target{
+    background-color: purple;
+  }
+
+  :root{
+    --rootvar : blue
+  }
+
+  #root{
+    color: var(--rootvar);
+  }
